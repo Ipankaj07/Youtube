@@ -72,7 +72,7 @@ function showVideoInBody(data) {
       div.setAttribute("class", "videoAPIBox");
 
       let vidDiv = document.createElement("div");
-      vidDiv.innerHTML = `<iframe src=https://www.youtube.com/embed/${videoId} title="YouTube video" frameBorder="0" width="280" height="200" allow="fullscreen"></iframe>`;
+      vidDiv.innerHTML = `<iframe src=https://www.youtube.com/embed/${videoId} title="YouTube video" frameBorder="0" width="250" height="155" allow="fullscreen"></iframe>`;
 
       let video_titleDiv = document.createElement("div");
       video_titleDiv.setAttribute("class", "video_titleDiv");
