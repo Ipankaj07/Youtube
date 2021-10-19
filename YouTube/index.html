@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/aa517dff/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- icon-script-web (https://ionic.io/ionicons) -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- -------------------  navbar -------------------------------- -->
+
+    <nav class="flex-div">
+
+        <div class="nav-left flex-div">
+            <!-- <img src="images/menu.png" alt="" class="menu-icon"> -->
+            <ion-icon name="reorder-three-outline" class="menu-icon"></ion-icon>
+            <img src="https://bit.ly/2YWtl6S" alt="" class="logo">
+
+        </div>
+
+        <div class="nav-middle flex-div">
+
+            <div class="search-box flex-div">
+
+                <!-- ---------- js - query add ---------- -->
+                <input type="text" id="query" placeholder="Search">
+
+                <button onclick="searchVideos()"><img src="images/search.png"></button>
+
+
+            </div>
+            <div id="mic-div">
+                <img src="https://bit.ly/30kdVd3" alt="" class="mic-icon">
+            </div>
+        </div>
+        <div class="nav-right flex-div">
+
+            <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="videocam-sharp"></ion-icon>
+            <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="apps-outline"></ion-icon>
+            <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="notifications-sharp"></ion-icon>
+            <img src="https://bit.ly/3aKLKG2" alt="" class="user-icon">
+
+        </div>
+
+    </nav>
+
+    <!-- ----------------- sidebar ---------------- -->
+
+    <div class="sidebar">
+
+        <div class="shortcut-link">
+
+            <a href="">
+                <ion-icon style="margin-right:22px; width:18px; height:18px;" name="home-sharp"></ion-icon>
+                <p>Home</p>
+            </a>
+            <a href=""><img src="images/explore.png" alt="">
+                <p>Explore</p>
+            </a>
+            <a href=""><img src="images/subscriprion.png" alt="">
+                <p>Subscription</p>
+            </a>
+            <hr>
+            <a href=""><img src="images/library.png" alt="">
+                <p>Library</p>
+            </a>
+            <a href=""><img src="images/history.png" alt="">
+                <p>History</p>
+            </a>
+            <a href="">
+                <ion-icon style="margin-right:22px; width:18px; height:18px;" name="time-outline"></ion-icon>
+                <p>Watch later</p>
+            </a>
+            <a href=""><img src="images/playlist.png" alt="">
+                <p>Playlist</p>
+            </a>
+            <a href=""><img src="images/show-more.png" alt="">
+                <p>Show More</p>
+            </a>
+            <hr>
+        </div>
+
+        <div class="subscribed-list">
+
+            <h3>SUBSCRIPTIONS</h3>
+            <a href="https://www.youtube.com/c/FlyingBeast320"><img src="https://bit.ly/3FYzP5V" alt="">
+                <p>Flying Beast</p>
+            </a>
+            <a href="https://www.youtube.com/user/ritvizomusic"><img src="https://bit.ly/3vsrBOH" alt="">
+                <p>RITVIZ</p>
+            </a>
+            <a href="https://www.youtube.com/c/BillieEilish"><img src="https://bit.ly/3lWEihP" alt="">
+                <p>Billie Eilish</p>
+            </a>
+            <a href="https://www.youtube.com/c/BBKiVines"><img src="https://bit.ly/3APoMZg" alt="">
+                <p>BB Ki Vines</p>
+            </a>
+            <a href="https://www.youtube.com/c/SpaceX"><img src="https://bit.ly/2Xk6Jwo" alt="">
+                <p>SpaceX</p>
+            </a>
+            <a href="https://www.youtube.com/c/Lofi2307"><img src="https://bit.ly/3jdsuWm" alt="">
+                <p>Lo-fi 2307</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- ------------ main content----------- -->
+
+    <div class="container">
+        <div class="banner">
+            <img src="https://bit.ly/3iVMNYr" alt="">
+        </div>
+
+        <!-- ------------ list of video -------------- -->
+
+        <div class="list-container">
+
+            <div id="videos"></div>
+            
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
