@@ -7,7 +7,6 @@ menuIcon.onclick = function () {
   container.classList.toggle("large-container");
 };
 
-
 // ------------------------ YT API ------------------------------ //
 
 ///  AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g  <-- API Key (YouTube)
@@ -50,3 +49,47 @@ function appendVideos(video_data) {
     videos.append(div);
   });
 }
+
+// --------------------------------------------------------------
+
+async function mostPopularVideo() {
+  //
+  let res = await fetch(
+    `https://youtube.googleapis.com/youtube/v3/search?type=video&key=AIzaSyDx9uDNrXDdFSZbDYNenVZuiCCuDTfjilk&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
+  );
+
+  let data = await res.json();
+  showVideoInBody(data.items);
+}
+function showVideoInBody(data) {
+  videos.innerHTML = null;
+
+  console.log("Data: ", data);
+
+  data.forEach(
+    ({ id: { videoId }, snippet: { title }, snippet: { channelTitle } }) => {
+      let div = document.createElement("div");
+      div.setAttribute("class", "videoAPIBox");
+
+      let vidDiv = document.createElement("div");
+      vidDiv.innerHTML = `<iframe src=https://www.youtube.com/embed/${videoId} title="YouTube video" frameBorder="0" width="280" height="200" allow="fullscreen"></iframe>`;
+
+      let video_titleDiv = document.createElement("div");
+      video_titleDiv.setAttribute("class", "video_titleDiv");
+      let video_title = document.createElement("p");
+      video_title.innerText = title;
+      video_titleDiv.append(video_title);
+
+      let channel_titleDiv = document.createElement("div");
+      channel_titleDiv.setAttribute("class", "channel_titleDiv");
+      let channel_title = document.createElement("p");
+      channel_title.innerText = channelTitle;
+
+      channel_titleDiv.append(channel_title);
+      div.append(vidDiv, video_titleDiv, channel_titleDiv);
+      videos.append(div);
+    }
+  );
+}
+
+mostPopularVideo();
