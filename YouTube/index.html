@@ -48,9 +48,12 @@
             <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="videocam-sharp"></ion-icon>
             <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="apps-outline"></ion-icon>
             <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="notifications-sharp"></ion-icon>
-            <img src="https://bit.ly/3aKLKG2" id="show-signup" alt="" class="user-icon">
-            <img src="https://bit.ly/3aKLKG2" id="show-login" alt="" class="user-icon">
-
+            <!-- <img src="https://bit.ly/3aKLKG2" id="show-signup" alt="" class="user-icon">
+            <img src="https://bit.ly/3aKLKG2" id="show-login" alt="" class="user-icon"> -->
+            <div id = "login-div" style="display: flex; cursor: pointer;">
+                <p id="show-login">Login</p>
+                <p style="margin-left:20px ;" id="show-signup">Sign-Up</p>
+            </div>
         </div>
 
     </nav>
@@ -140,6 +143,7 @@
         <div class="form">
 
             <h2>Login</h2>
+            <div id = "conf-login"></div>
             <div id="login">
                 <form onsubmit=" Login(event)" id="login-form">
                     <div class="form-element">
@@ -176,14 +180,16 @@
 
     <!-- ---------/ login - END /----------- -->
 
-    
+
     <!-- ------------- sign-up START ---------- -->
 
-    <div class="popup popup1" style=" padding: 5px 30px;margin-top: 30px;">
+    <div class="popup popup1" style=" padding: 5px 30px;margin-top: 30px; overflow:hidden;">
         <div class="close-btn">&times;</div>
         <div class="form">
 
             <h2>Signup</h2>
+            <div id = "conf-signup"></div>
+
             <div id="signup">
                 <form onsubmit=" Signup(event)" id="signup-form">
                     <div class="form-element">
@@ -223,7 +229,7 @@
             </div>
 
             <div class="form-element">
-                <a href="login.html"><span style="color:#222; font-weight:500;"> If you already registered ! </span>
+                <a href="#"><span style="color:#222; font-weight:500;"> If you already registered ! </span>
                     Login </a>
             </div>
 
