@@ -8,6 +8,7 @@
     <title>YouTube</title>
     <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/aa517dff/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-signup.css">
 </head>
 
 <body>
@@ -47,7 +48,8 @@
             <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="videocam-sharp"></ion-icon>
             <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="apps-outline"></ion-icon>
             <ion-icon style="margin-right: 22px; width: 22px; height:22px" name="notifications-sharp"></ion-icon>
-            <img src="https://bit.ly/3aKLKG2" alt="" class="user-icon">
+            <img src="https://bit.ly/3aKLKG2" id="show-signup" alt="" class="user-icon">
+            <img src="https://bit.ly/3aKLKG2" id="show-login" alt="" class="user-icon">
 
         </div>
 
@@ -125,11 +127,112 @@
         <div class="list-container">
 
             <div id="videos"></div>
-            
+
         </div>
 
     </div>
 
+
+    <!-- ---------/ login - START /----------- -->
+
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+
+            <h2>Login</h2>
+            <div id="login">
+                <form onsubmit=" Login(event)" id="login-form">
+                    <div class="form-element">
+                        <label for="username">Username</label>
+                        <input type="text" id="user" placeholder="username" />
+                    </div>
+
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="pass" placeholder="Enter your password" />
+                    </div>
+
+                    <div class="form-element">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me"> Remember me</label>
+                    </div>
+
+
+                    <div class="form-element">
+                        <input type="submit" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-element">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+
+    <!-- ---------/ login - END /----------- -->
+
+    
+    <!-- ------------- sign-up START ---------- -->
+
+    <div class="popup popup1" style=" padding: 5px 30px;margin-top: 30px;">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+
+            <h2>Signup</h2>
+            <div id="signup">
+                <form onsubmit=" Signup(event)" id="signup-form">
+                    <div class="form-element">
+                        <label for="name">Name</label>
+                        <input type="text" id='name' placeholder="name" />
+                    </div>
+
+                    <div class="form-element">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email address" />
+                    </div>
+
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" />
+                    </div>
+
+                    <div class="form-element">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="username" />
+                    </div>
+
+                    <div class="form-element">
+                        <label for="mobile">Mobile number</label>
+                        <input type="number" id="mobile" placeholder="mobile" />
+                    </div>
+
+                    <div class="form-element">
+                        <label for="description">Discription</label>
+                        <input type="text" id='description' placeholder="description" />
+                    </div>
+
+                    <div class="form-element">
+                        <input type="submit" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-element">
+                <a href="login.html"><span style="color:#222; font-weight:500;"> If you already registered ! </span>
+                    Login </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+
+    <!-- ------------- sign-up END ---------- -->
 
     <script src="script.js"></script>
 </body>

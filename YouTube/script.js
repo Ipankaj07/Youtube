@@ -21,7 +21,7 @@ async function searchVideos() {
   let query = document.getElementById("query").value;
 
   let res = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyDx9uDNrXDdFSZbDYNenVZuiCCuDTfjilk&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
+    `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
     // `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyDx9uDNrXDdFSZbDYNenVZuiCCuDTfjilk&maxResults=20`   
   );
 
@@ -35,26 +35,6 @@ async function searchVideos() {
 //----------------------------------------------------------
 
 // searchVideos();
-
-/* function appendVideos(video_data) {
-  videos.innerHTML = null;
-
-  video_data.forEach(({ id: { videoId } }) => {
-    // console.log(videoId);
-
-    let div = document.createElement("div");
-
-    // embed YT video on our WEB
-
-    div.innerHTML = `<iframe width="250" height="155" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-
-    div.style.marginTop = "10px";
-    videos.append(div);
-  });
-}
- */
-
-//----------------------------------------------------------
 
 function appendVideos(video_data) {
   videos.innerHTML = null;
@@ -92,7 +72,7 @@ function appendVideos(video_data) {
 async function mostPopularVideo() {
   //
   let res = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?type=video&key=AIzaSyDx9uDNrXDdFSZbDYNenVZuiCCuDTfjilk&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
+    `https://youtube.googleapis.com/youtube/v3/search?type=video&key=AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
   );
 
   let data = await res.json();
@@ -134,5 +114,4 @@ function showVideoInBody(data) {
 mostPopularVideo();
 
 //-------------------------------------------------------
-
 
