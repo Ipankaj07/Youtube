@@ -69,12 +69,14 @@ function appendVideos(video_data) {
 
       let video_titleDiv = document.createElement("div");
       video_titleDiv.setAttribute("class", "video_titleDiv");
+      
       let video_title = document.createElement("p");
       video_title.innerText = title;
       video_titleDiv.append(video_title);
 
       let channel_titleDiv = document.createElement("div");
       channel_titleDiv.setAttribute("class", "channel_titleDiv");
+      
       let channel_title = document.createElement("p");
       channel_title.innerText = channelTitle;
 
@@ -111,12 +113,14 @@ function showVideoInBody(data) {
 
       let video_titleDiv = document.createElement("div");
       video_titleDiv.setAttribute("class", "video_titleDiv");
+      
       let video_title = document.createElement("p");
       video_title.innerText = title;
       video_titleDiv.append(video_title);
 
       let channel_titleDiv = document.createElement("div");
       channel_titleDiv.setAttribute("class", "channel_titleDiv");
+      
       let channel_title = document.createElement("p");
       channel_title.innerText = channelTitle;
 
