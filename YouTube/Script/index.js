@@ -9,8 +9,6 @@ menuIcon.onclick = function () {
 
 // ------------------------ YT API ------------------------------ //
 
-///  AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g  <-- API Key (YouTube)
-
 let videos = document.getElementById("videos");
 
 async function searchVideos() {
