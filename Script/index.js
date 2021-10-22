@@ -19,7 +19,7 @@ async function searchVideos() {
   let query = document.getElementById("query").value;
 
   let res = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
+    `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g&maxResults=50&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=NZ`
     // `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyDx9uDNrXDdFSZbDYNenVZuiCCuDTfjilk&maxResults=20`   
   );
 
@@ -70,7 +70,7 @@ function appendVideos(video_data) {
 async function mostPopularVideo() {
   //
   let res = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?type=video&key=AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g&maxResults=20&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=IN`
+    `https://youtube.googleapis.com/youtube/v3/search?type=video&key=AIzaSyAHXKNTiyvqwO1-BZuhWHyuwdgWPFve21g&maxResults=50&safeSearch=strict&videoCaption=closedCaption&part=snippet&chart=mostPopular&regionCode=IN`
   );
 
   let data = await res.json();
