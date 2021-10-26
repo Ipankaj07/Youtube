@@ -40,7 +40,6 @@ function appendVideos(video_data) {
   video_data.forEach(
     ({ id: { videoId }, snippet: { title }, snippet: { channelTitle } }) => {
       let div = document.createElement("div");
-      div.setAttribute("class", "videoAPIBox");
 
       let vidDiv = document.createElement("div");
       vidDiv.innerHTML = `<iframe width="250" height="155" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
@@ -84,7 +83,6 @@ function showVideoInBody(data) {
   data.forEach(
     ({ id: { videoId }, snippet: { title }, snippet: { channelTitle } }) => {
       let div = document.createElement("div");
-      div.setAttribute("class", "videoAPIBox");
 
       let vidDiv = document.createElement("div");
       vidDiv.innerHTML = `<iframe src=https://www.youtube.com/embed/${videoId} title="YouTube video" frameBorder="0" width="250" height="155" allow="fullscreen"></iframe>`;
